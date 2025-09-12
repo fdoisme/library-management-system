@@ -1,8 +1,8 @@
 package com.sinaukoding.librarymanagementsystem.util;
 
-import com.sinaukoding.ecommerce.builder.CustomBuilder;
-import com.sinaukoding.ecommerce.builder.CustomSpecification;
-import com.sinaukoding.ecommerce.builder.SearchCriteria;
+import com.sinaukoding.librarymanagementsystem.builder.CustomBuilder;
+import com.sinaukoding.librarymanagementsystem.builder.CustomSpecification;
+import com.sinaukoding.librarymanagementsystem.builder.SearchCriteria;
 import io.micrometer.common.util.StringUtils;
 
 import java.util.Set;

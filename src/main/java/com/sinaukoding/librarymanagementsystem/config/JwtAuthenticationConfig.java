@@ -1,7 +1,7 @@
 package com.sinaukoding.librarymanagementsystem.config;
 
-import com.sinaukoding.ecommerce.service.app.impl.UserLoggedInServiceImpl;
-import com.sinaukoding.ecommerce.util.JwtUtil;
+import com.sinaukoding.librarymanagementsystem.service.app.impl.UserLoggedInServiceImpl;
+import com.sinaukoding.librarymanagementsystem.util.JwtUtil;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

@@ -1,6 +1,6 @@
 package com.sinaukoding.librarymanagementsystem.config;
 
-import com.sinaukoding.ecommerce.entity.managementuser.User;
+import com.sinaukoding.librarymanagementsystem.entity.managementuser.User;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

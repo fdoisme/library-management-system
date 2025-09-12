@@ -1,6 +1,6 @@
 package com.sinaukoding.librarymanagementsystem.config;
 
-import com.sinaukoding.ecommerce.model.response.BaseResponse;
+import com.sinaukoding.librarymanagementsystem.model.response.BaseResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.security.access.AccessDeniedException;
