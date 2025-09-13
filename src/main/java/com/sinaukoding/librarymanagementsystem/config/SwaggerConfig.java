@@ -13,15 +13,15 @@ import io.swagger.v3.oas.annotations.servers.Server;
 @OpenAPIDefinition(
         info = @Info(
                 contact = @Contact(
-                        name = "Muhammad Fariz",
-                        email = "muhamad.fariz@yopmail.com"
+                        name = "Fernando",
+                        email = "fernando94.mail@gmail.com"
                 ),
-                description = "Swagger documentation for Aplikasi E-commerce",
-                title = "Swagger Aplikasi E-commerce",
+                description = "Swagger documentation for Aplikasi Library Management System",
+                title = "Aplikasi Library Management System",
                 version = "1.0.0",
                 license = @License(
-                        name = "Sinau Koding",
-                        url = "https://sinaukoding.co.id/"
+                        name = "Fdoisme",
+                        url = "https://github.com/fdoisme"
                 ),
                 termsOfService = "Terms of service"
         ),
