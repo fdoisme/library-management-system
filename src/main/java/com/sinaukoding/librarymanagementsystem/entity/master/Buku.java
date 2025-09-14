@@ -1,5 +1,6 @@
 package com.sinaukoding.librarymanagementsystem.entity.master;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sinaukoding.librarymanagementsystem.entity.app.BaseEntity;
 import com.sinaukoding.librarymanagementsystem.model.enums.Kategori;
 import jakarta.persistence.*;
@@ -57,6 +58,7 @@ public class Buku extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
 //    Boleh null karena asumsi jika dipinjam maka lokasi tidak ada
     @JoinColumn(name = "id_Lokasi", nullable = true)
+    @JsonIgnore
     private Lokasi lokasi;
 
 //    @OneToMany(cascade = CascadeType.ALL, mappedBy = "buku", orphanRemoval = true, fetch = FetchType.LAZY)

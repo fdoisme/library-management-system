@@ -9,4 +9,6 @@ import java.util.Optional;
 
 public interface LokasiRepository extends JpaRepository<Lokasi, String>, JpaSpecificationExecutor<Lokasi> {
     Optional<Lokasi> findByIdAndKapasitasTersediaGreaterThan(String id, Integer kapasitasTersediaIsGreaterThan);
+
+    boolean existsByKodeLokasi(String kodeLokasi);
 }

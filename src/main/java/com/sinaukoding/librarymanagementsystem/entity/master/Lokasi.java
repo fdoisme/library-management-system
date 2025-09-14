@@ -1,5 +1,6 @@
 package com.sinaukoding.librarymanagementsystem.entity.master;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sinaukoding.librarymanagementsystem.entity.app.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
@@ -25,7 +26,7 @@ public class Lokasi extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String kodeLokasi;
 
     @Column(nullable = false)
@@ -36,5 +37,6 @@ public class Lokasi extends BaseEntity {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "lokasi", orphanRemoval = true, fetch = FetchType.LAZY)
     @Builder.Default
+    @JsonIgnore
     private List<Buku> bukuList = new ArrayList<>();
 }
