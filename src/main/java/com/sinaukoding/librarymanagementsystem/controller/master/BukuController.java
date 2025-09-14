@@ -45,9 +45,9 @@ public class BukuController {
             @Parameter(name = "judul", description = "Search by judul", in = ParameterIn.QUERY, schema = @Schema(type = "string", defaultValue = ""), required = false),
             @Parameter(name = "pengarang", description = "Search by pengarang", in = ParameterIn.QUERY, schema = @Schema(type = "string", defaultValue = ""), required = false),
             @Parameter(name = "penerbit", description = "Search by penerbit", in = ParameterIn.QUERY, schema = @Schema(type = "string", defaultValue = ""), required = false),
-            @Parameter(name = "tahunPublikasi", description = "Search by tahunPublikasi", in = ParameterIn.QUERY, schema = @Schema(type = "integer"), required = false),
-            @Parameter(name = "kategori", description = "Search by status", in = ParameterIn.QUERY, schema = @Schema(type = "string"), required = false),
-            @Parameter(name = "tags", description = "Search by status", in = ParameterIn.QUERY, schema = @Schema(type = "string", defaultValue = ""), required = false)
+            @Parameter(name = "tahunPublikasi", description = "Search by tahun publikasi", in = ParameterIn.QUERY, schema = @Schema(type = "integer"), required = false),
+            @Parameter(name = "kategori", description = "Search by kategori", in = ParameterIn.QUERY, schema = @Schema(type = "string"), required = false),
+            @Parameter(name = "tags", description = "Search by tags", in = ParameterIn.QUERY, schema = @Schema(type = "string", defaultValue = ""), required = false)
     })
     public BaseResponse<?> findAll(@Parameter(hidden = true) @PageableDefault(direction = Sort.Direction.DESC, sort = "judul") Pageable pageable,
                                    @Parameter(hidden = true) @ModelAttribute BukuFilterRecord filterRequest) {

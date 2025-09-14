@@ -75,7 +75,7 @@ public class BukuServiceImpl implements BukuService {
 
     @Override
     public void delete(String id) {
-        var user = bukuRepository.findById(id).orElseThrow(() -> new RuntimeException("Data user tidak ditemukan"));
+        var user = bukuRepository.findById(id).orElseThrow(() -> new RuntimeException("Data buku tidak ditemukan"));
         bukuRepository.delete(user);
     }
 

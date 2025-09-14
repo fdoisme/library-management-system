@@ -11,4 +11,6 @@ public interface LokasiRepository extends JpaRepository<Lokasi, String>, JpaSpec
     Optional<Lokasi> findByIdAndKapasitasTersediaGreaterThan(String id, Integer kapasitasTersediaIsGreaterThan);
 
     boolean existsByKodeLokasi(String kodeLokasi);
+
+    List<Lokasi> findByKapasitasTersediaGreaterThan(Integer kapasitasTersediaIsGreaterThan);
 }

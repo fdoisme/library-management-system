@@ -18,30 +18,30 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableMethodSecurity
 public class SecurityConfig {
 
-//    private final JwtAuthenticationConfig jwtAuthenticationConfig;
-//    private final AccessDeniedConfig accessDeniedConfig;
-//    private final AuthenticationEntryPointConfig authenticationEntryPointConfig;
+    private final JwtAuthenticationConfig jwtAuthenticationConfig;
+    private final AccessDeniedConfig accessDeniedConfig;
+    private final AuthenticationEntryPointConfig authenticationEntryPointConfig;
 //
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(AbstractHttpConfigurer::disable)
-//                .authorizeHttpRequests(auth -> auth
-//                        .requestMatchers("/auth/login/**").permitAll()
-//                        .requestMatchers("/v2/api-docs", "/v3/api-docs", "/v3/api-docs/**", "/swagger-resources", "/swagger-resources/**",
-//                                "/configuration/ui", "/configuration/security", "/swagger-ui/**", "/webjars/**", "/swagger-ui.html").permitAll()
-//                        .anyRequest().authenticated()
-//                )
-//                .exceptionHandling(ex -> ex
-//                        .authenticationEntryPoint(authenticationEntryPointConfig)
-//                        .accessDeniedHandler(accessDeniedConfig)
-//                )
-//                .addFilterBefore(jwtAuthenticationConfig, UsernamePasswordAuthenticationFilter.class);
-
-//                Delete kalau sudah submit, hanya untuk testing
                 .authorizeHttpRequests(auth -> auth
-                        .anyRequest().permitAll()
-                );
+                        .requestMatchers("/auth/login/**").permitAll()
+                        .requestMatchers("/v2/api-docs", "/v3/api-docs", "/v3/api-docs/**", "/swagger-resources", "/swagger-resources/**",
+                                "/configuration/ui", "/configuration/security", "/swagger-ui/**", "/webjars/**", "/swagger-ui.html").permitAll()
+                        .anyRequest().authenticated()
+                )
+                .exceptionHandling(ex -> ex
+                        .authenticationEntryPoint(authenticationEntryPointConfig)
+                        .accessDeniedHandler(accessDeniedConfig)
+                )
+                .addFilterBefore(jwtAuthenticationConfig, UsernamePasswordAuthenticationFilter.class);
+
+////                Delete kalau sudah submit, hanya untuk testing
+//                .authorizeHttpRequests(auth -> auth
+//                        .anyRequest().permitAll()
+//                );
 
         return http.build();
     }

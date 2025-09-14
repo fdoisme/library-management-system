@@ -61,7 +61,8 @@ public class Buku extends BaseEntity {
     @JsonIgnore
     private Lokasi lokasi;
 
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "buku", orphanRemoval = true, fetch = FetchType.LAZY)
-//    @Builder.Default
-//    private List<Peminjaman> peminjamanList = new ArrayList<>();
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "buku", orphanRemoval = true, fetch = FetchType.LAZY)
+    @Builder.Default
+    @JsonIgnore
+    private List<Peminjaman> peminjamanList = new ArrayList<>();
 }
