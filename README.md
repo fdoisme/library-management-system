@@ -51,7 +51,19 @@
 ```
 <pre>
 ```mermaid 
-  flowchart TD 
-  A[Start] --> B{Condition} B -- Yes --> C[Do something] B -- No --> D[Do something else] C --> E[End] D --> E 
+---
+title: Library Management System
+---
+flowchart TD
+    P["Pustakawan"]
+    A["Anggota"]
+    newLines["Line1
+    Line 2
+    Line 3
+    Line 3
+    Line 3
+    Line 3"]
+    n1["Text Block"]
+    n1@{ shape: text}
 ```
 <pre>
