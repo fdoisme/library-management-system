@@ -1,7 +1,8 @@
 package com.sinaukoding.librarymanagementsystem.entity.managementuser;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sinaukoding.librarymanagementsystem.entity.app.BaseEntity;
-import com.sinaukoding.librarymanagementsystem.entity.master.Buku;
+import com.sinaukoding.librarymanagementsystem.entity.master.Peminjaman;
 import com.sinaukoding.librarymanagementsystem.model.enums.Role;
 import com.sinaukoding.librarymanagementsystem.model.enums.Status;
 import jakarta.persistence.*;
@@ -58,7 +59,8 @@ public class User extends BaseEntity {
     private String token;
     private LocalDateTime expiredTokenAt;
 
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user", orphanRemoval = true, fetch = FetchType.LAZY)
-//    @Builder.Default
-//    private List<Peminjaman> peminjamanList = new ArrayList<>();
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user", orphanRemoval = true, fetch = FetchType.LAZY)
+    @Builder.Default
+    @JsonIgnore
+    private List<Peminjaman> peminjamanList = new ArrayList<>();
 }
